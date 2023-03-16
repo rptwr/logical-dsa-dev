@@ -1,75 +1,39 @@
 package arrays;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
-/*
- Given an array, find the second smallest and second largest element in the array.
- Print ‘-1’ in the event that either of them doesn’t exist. 
-*/
+// Java Program to find the second largest and second smallest elements in the array without using Functions
 
-// Solution 1: (Brute Force) [this approach only works if there are no duplicates] 
-
-public class Q3_1 {
+public class Q3_1 
+{
 	public static void main(String[] args) {
-		int[] arr = {1, 2, 4, 6, 7, 5};
-//		int[] arr = {1};
-		int n = arr.length;
-		getElements(arr, n);
-	}
-	static private void getElements(int[] arr, int n) {
-		if (n == 0 || n == 1) {
-			System.out.println(-1);
-			System.out.println(" ");
-			System.out.println(-1);
-			System.out.println("\n");
-		}
-		Arrays.sort(arr);
-		int small = arr[1];
-		int large = arr[n - 2];
+		Scanner sc = new Scanner(System.in);
+		int n;   //  //Declare array size
+		System.out.println("Enter the size of an array ");
+		n = sc.nextInt();	//	Initialize array size
 		
-		System.out.println("The second smallest element in the array: " + small);
-		System.out.println("The second largest element in the array: " + large);
+		int[] arr = new int[n];  // Declare array
+		System.out.println("Enter the array ");
+		for (int i = 0; i < n; i++) {
+			arr[i] = sc.nextInt();   // Initialize array
+		}
+
+//		int[] arr = { 2, 1, 4, 6, 7, 5 };
+//		int n = arr.length;
+		for (int i = 0; i < n; i++) // //Use to hold the element
+		{
+			for (int j = i + 1; j < n; j++)  // //Use to compare with the rest of the elements 
+			{
+				if (arr[i] > arr[j]) // //Check and swap
+				{
+					int temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}	
+		}
+		System.out.println("Second Smallest Element in the array: " + arr[1]);
+		System.out.println("Second Largest Element in the array: " + arr[n - 2]);
 	}
 }
 
-
-
-
-
-
-
-/*
- Solution 1: (Brute Force) [this approach only works if there are no duplicates]
-
-Intuition: What do we do to find the largest or the smallest element present in an array? 
-We ideally sort them and the first element would be the smallest of all while the 
-last element would be the largest. Can we find the second smallest and second-largest 
-using a similar approach?
-
-Approach:
-Sort the array in ascending order
-The element present at the second index is the second smallest element
-The element present at the second index from the end is the second largest element
-
-Time Complexity: O(NlogN), For sorting the array
-
-Space Complexity: O(1)
- * */
-
-
-//==========================================================================================
-
-/*
- Example 1:
-Input: [1,2,4,7,7,5]
-Output: Second Smallest : 2
-	Second Largest : 5
-Explanation: The elements are as follows 1,2,3,5,7,7 and hence second largest of these is 5 and second smallest is 2
-
-Example 2:
-Input: [1]
-Output: Second Smallest : -1
-	Second Largest : -1
-Explanation: Since there is only one element in the array, it is the largest and smallest element present in the array.
- There is no second largest or second smallest element present.
- */
