@@ -9,6 +9,8 @@ public class Q4_1 {
 		int n = 5;
 		reverseArray(arr, n);
 	}
+
+	
 	static void reverseArray(int[] arr, int n) {
 		int[] ans = new int[n];
 		for (int i = n - 1; i >= 0; i--) {
@@ -16,9 +18,10 @@ public class Q4_1 {
 		}
 		printArray(ans, n);
 	}
-	static void printArray(int[] ans, int n) {
+	
+	static void printArray(int[] arr, int n) {
 		for (int i = 0; i < n; i++) {
-			System.out.print(ans[i] + ", ");
+			System.out.print(arr[i] + ", ");
 		}
 	}
 }
@@ -51,3 +54,4 @@ while storing the elements in ans[]  in opposite direction.
 
 
  */
+
