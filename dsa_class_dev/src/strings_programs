@@ -1,0 +1,111 @@
+package com.example.app1;
+
+// convert a string into int type without parse method
+
+public class M1 
+//{
+//	public static void main(String[] args) {
+//		String s1 = "java";
+//		int num = 0;
+//		for (int i = 0; i < s1.length(); i++) {
+//			num = num * 10 + (s1.charAt(i) - '0');
+//		}
+//		System.out.println(num);
+//		
+//	}
+//}
+
+
+{
+	public static void main(String[] args) {
+		if(args.length == 0) {
+			System.out.println("pls supply one int command line ");
+			return;
+		}
+		String s1 = args[0];
+		char c1 = s1.charAt(0);
+		int i = c1 - '0';
+		int j = i * 2;
+		System.out.println(i + ", " + j);
+	}
+}
+
+// ASCII value of '0' = 48
+// ASCII value of a = 97
+// 97 - 48 = 49
+// 0 + 49 = 49
+// 490 + 49 = 539
+// 5390 + 49 = 5439
+
+
+=============================================================
+package com.example.project1;
+
+import java.util.Scanner;
+
+// read the word by word from a given string without spit and without trim method there are multiple spaces between the word you should not print spaces as a word in java
+public class M1
+
+//{
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter line of chars");
+//		String s1 = sc.nextLine();
+//		String word = "";
+//		int begin = 0, end = s1.indexOf(' ');
+//		while(end != -1) {
+//			word = s1.substring(begin, end);
+//			System.out.println(word);
+//			while(s1.charAt(end + 1) == ' ') {
+//				end++;
+//			}
+//			begin = end + 1;
+//			end = s1.indexOf(' ', begin);
+//		}
+//		word = s1.substring(begin, s1.length());
+//		System.out.println(word);
+//	}
+//}
+
+//{
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter line of chars");
+//		String s1 = sc.nextLine();
+//		String word = "";
+//		for(int i = 0;i<s1.length();i++)
+//		{
+//			char c = s1.charAt(i);
+//			if (c == ' ') {
+//				if (!word.isEmpty()) {
+//					System.out.println(word);
+//					word = "";
+//				}
+//			} else {
+//				word += c;
+//			}
+//		}
+//		if(!word.isEmpty())
+//		{
+//			System.out.println(word);
+//		}
+//	}
+//}
+
+// remove alternative word form the given string
+// remove all white spaces in the given string without using replcae methodc
+
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter multiple Strings");
+		String s1 = sc.nextLine();
+		for (int i = 0; i < s1.length(); i++) {
+			if(s1.charAt(i) == ' ') {
+				s1 = s1.substring(0, i) + s1.substring(i + 1);
+				i--;
+			}
+		}
+		System.out.println(s1);
+	}
+}

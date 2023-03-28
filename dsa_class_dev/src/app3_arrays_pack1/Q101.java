@@ -1,0 +1,24 @@
+package app3_arrays_pack1;
+
+/*
+Print first half of the element which are bigger than first element
+*/
+
+import java.util.Arrays;
+class Q101
+{
+	public static void main(String[] args) 
+	{
+		int[] a1 = {10, 2, 13, 40, 15, 60, 7, 80};
+		//System.out.println("initial:" + Arrays.toString(a1));
+		for(int i = 1; i < (a1.length/2) ; i++)
+		{
+			if(a1[i] > a1[0])
+			{
+				System.out.print(a1[i] + ", ");
+			}
+		}
+		
+		//System.out.println("final:" + Arrays.toString(a1));
+	}
+}
