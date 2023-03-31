@@ -13,3 +13,7 @@ class Q1
 		System.out.println(i);
 	}
 }
+
+
+// (/)divided by gives quotient value(a result obtained by dividing one quantity by another)
+// (%) mod operator gives remainder value
