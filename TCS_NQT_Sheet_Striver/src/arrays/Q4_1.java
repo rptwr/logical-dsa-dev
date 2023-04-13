@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Arrays;
+
 // Reverse a given Array
 // Solution 1: Using an extra array.
 
@@ -17,6 +19,8 @@ public class Q4_1 {
 			ans[n - i - 1] = arr[i];
 		}
 		printArray(ans, n);
+		System.out.println();
+		System.out.println(Arrays.toString(ans));
 	}
 	
 	static void printArray(int[] arr, int n) {

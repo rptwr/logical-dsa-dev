@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Arrays;
+
 //Reverse a given Array
 // Solution 2:  Space optimized iterative method
 public class Q4_2 {
@@ -19,6 +21,7 @@ public class Q4_2 {
 			p2--;
 		}
 		printArray(arr, n);
+//		System.out.println(Arrays.toString(arr));
 	}
 	public static void main(String[] args) {
 		int [] arr = {5, 4, 3, 2, 1};

@@ -3,7 +3,7 @@ package arrays;
 import java.util.Scanner;
 
 // Java Program to find the second largest and second smallest elements in the array without using Functions
-
+//Solution 1: (Brute Force) [this approach only works if there are no duplicates]
 public class Q3_1 
 {
 	public static void main(String[] args) {
@@ -19,6 +19,7 @@ public class Q3_1
 		}
 
 //		int[] arr = { 2, 1, 4, 6, 7, 5 };
+//		int[] arr = { 1, 2, 4, 7, 7, 5 };
 //		int n = arr.length;
 		for (int i = 0; i < n; i++) // //Use to hold the element
 		{

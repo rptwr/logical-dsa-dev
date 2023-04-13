@@ -12,6 +12,7 @@ import java.util.Arrays;
 public class Q3_2 {
 	public static void main(String[] args) {
 		int[] arr = {1, 2, 4, 6, 7, 5};
+//		int[] arr = { 1, 2, 4, 7, 7, 5 };
 //		int[] arr = {1};
 		int n = arr.length;
 		getElements(arr, n);

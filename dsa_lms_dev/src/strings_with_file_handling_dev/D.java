@@ -14,3 +14,13 @@ public class D {
 		}
 	}
 }
+
+// listFiles() returns all the file in given directory
+
+//enter path
+//
+//E:\core-java-dev\file_docs
+//hello.html
+//spacex.png
+//teslalogo.png
+//Test.java
