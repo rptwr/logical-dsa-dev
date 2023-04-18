@@ -24,6 +24,7 @@ public class Q4_4 {
 		int n = 5;
 		reverseArray(arr);
 		printArray(arr, n);
+//		System.out.println(Arrays.toString(arr));
 	}
 
 }

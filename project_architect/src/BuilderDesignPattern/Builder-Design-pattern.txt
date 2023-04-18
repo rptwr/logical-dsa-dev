@@ -1,0 +1,13 @@
+Builder Design pattern
+======================
+* One of the most important creational design pattern
+* Builder Design Pattern was introduced mostly to resolve some of the problems with Factory Design pattern that is
+ why we came up with  Builder Design Pattern.(In case we have to pass too many parametersthen it will create problem)
+
+* Nested class is used to group the class belonging to the similar group.It improves code redabilty.
+We can hide the implementation with the help of inner nested class.With the help of nested inner class we can 
+access private constructor of the outer class.
+
+if we dont want optional object then also we have to pass those object as null in parameters)
+* In builder patten we need static nested class
+* Optional value will return with default value of the object along with required values

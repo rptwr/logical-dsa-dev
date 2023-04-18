@@ -1,0 +1,20 @@
+Transient and Volatile
+===============================
+* Transient Keyword: It is a keyword which will mark a variable.It will not marked to be serialized when it is persisted
+Here variable wont go only default value of data type will go.for example int a = 10; then only 0 will go
+
+* Volatile Keyword: Volatile keyword is used to modify the value of a variable by different threads. It is also
+ used to make classes thread safe. It means that multiple threads can use a method and instance of the classes at
+  the same time without any problem.
+
+* Thread may have different values for same variable.for ex if we have int a = 5 in main memory then Thread 1 can
+ have int i = 10, Thread2 can have int i = 5;
+
+* When thread modifies variable value then it is not reflecting in main memory instantly
+* short-term memory is called cpu cache
+* Cpu cache will write every thing in the main memory but it needs some time.
+
+* Data Inconsistency: when thread changes the variable value then that value might not reflect immediately to the memory.
+* If we use volatile keyword then Whenever a Thread 1 is changing value of variable it will directly change the value 
+in the main memory.There is no concept of short lived cache memory when we use volatile.
+-----------------------------------------------------------------------
